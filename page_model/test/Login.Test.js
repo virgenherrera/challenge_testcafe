@@ -1,10 +1,10 @@
 import {LoginPage} from '../pages/Login_Page'
 import { ClientFunction } from 'testcafe'
-import { InventoryPage } from '../pages/Inventory_Page'
+import { InventoryPage } from '../pages/Inventory.page'
 import { CartPage } from '../pages/Cart_Page';
-import { CheckOutStepOne } from '../pages/Checkout_StepOne';
+import { CheckOutStepOne } from '../pages/checkout-step-one.page';
 import { inventoryItems } from '../data/Inventory_Items';
-import {CheckoutStepTwo} from '../pages/Checkout_StepTwo'
+import {CheckoutStepTwo} from '../pages/checkout-step-two.page'
 
 let inventoryPage = null;
 let loginPage = null;
@@ -12,7 +12,7 @@ let cartPage = null;
 let checkOutStepOne = null;
 let checkOutStepTwo = null;
 
-fixture('Login testing')
+fixture('login-page Suite')
     .page`https://www.saucedemo.com/`
     .beforeEach(()=>{
         inventoryPage = new InventoryPage()
