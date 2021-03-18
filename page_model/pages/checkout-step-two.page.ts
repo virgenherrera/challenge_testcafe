@@ -1,9 +1,9 @@
-import { Selector, t } from 'testcafe';
-import { AuthSelectorPage } from './auth-selector.page';
+import { Selector, t } from "testcafe";
+import { AuthSelectorPage } from "./auth-selector.page";
 
 export class CheckoutStepTwo extends AuthSelectorPage {
-  inventoryItemsCartList = Selector('.cart_list').find('.cart_item');
-  finishButton = Selector('.btn_action.cart_button');
+  inventoryItemsCartList = Selector(".cart_list").find(".cart_item");
+  finishButton = Selector(".btn_action.cart_button");
 
   constructor() {
     super();

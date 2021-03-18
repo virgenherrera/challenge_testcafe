@@ -1,11 +1,11 @@
-import { Selector, t } from 'testcafe';
-import { AppCommon } from './app-common.page';
+import { Selector, t } from "testcafe";
+import { AppCommon } from "./app-common.page";
 
 export class CheckOutStepOne extends AppCommon {
-  continueButton = Selector('.btn_primary.cart_button');
-  firstNameField = Selector('#first-name');
-  lastNameField = Selector('#last-name');
-  postalCodeField = Selector('#postal-code');
+  continueButton = Selector(".btn_primary.cart_button");
+  firstNameField = Selector("#first-name");
+  lastNameField = Selector("#last-name");
+  postalCodeField = Selector("#postal-code");
 
   constructor() {
     super();

@@ -1,8 +1,8 @@
-import { Selector, t } from 'testcafe';
-import { AuthSelectorPage } from './auth-selector.page';
+import { Selector, t } from "testcafe";
+import { AuthSelectorPage } from "./auth-selector.page";
 
 export class InventoryPage extends AuthSelectorPage {
-  inventoryItems = Selector('.inventory_list').find('.inventory_item');
+  inventoryItems = Selector(".inventory_list").find(".inventory_item");
 
   constructor() {
     super();
@@ -13,11 +13,11 @@ export class InventoryPage extends AuthSelectorPage {
   }
 
   async clickOnLogoutLink() {
-    return t.click(this.logoutLink);
+    return await t.click(this.logoutLink);
   }
 
   async clickOnCartLink() {
-    return t.click(this.shoppingCartLink);
+    return await t.click(this.shoppingCartLink);
   }
 
   async clickAddToCartButton(listItem: number) {
@@ -27,8 +27,8 @@ export class InventoryPage extends AuthSelectorPage {
   }
 
   getShoppingCartValue() {
-    const { innerText = '' } = this.shoppingCartLink.find(
-      '.shopping_cart_badge',
+    const { innerText = "" } = this.shoppingCartLink.find(
+      ".shopping_cart_badge",
     );
 
     return innerText;
