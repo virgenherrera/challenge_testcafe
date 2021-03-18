@@ -1,8 +1,13 @@
 {
-    "cSpell.ignoreWords": [
-        "publickey",
-        "quintana",
-        "testcafe",
-        "virgen"
-    ]
+  "editor.codeActionsOnSave": { "source.fixAll.tslint": true },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "errorLens.addAnnotationTextPrefixes": true,
+  "errorLens.delay": 1000,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "telemetry.enableTelemetry": false,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }

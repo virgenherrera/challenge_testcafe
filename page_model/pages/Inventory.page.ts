@@ -1,8 +1,8 @@
-import { Selector, t } from "testcafe";
-import { AuthSelectorPage } from "./auth-selector.page";
+import { Selector, t } from 'testcafe';
+import { AuthSelectorPage } from './auth-selector.page';
 
 export class InventoryPage extends AuthSelectorPage {
-  inventoryItems = Selector(".inventory_list").find(".inventory_item");
+  inventoryItems = Selector('.inventory_list').find('.inventory_item');
 
   constructor() {
     super();
@@ -21,25 +21,16 @@ export class InventoryPage extends AuthSelectorPage {
   }
 
   async clickAddToCartButton(listItem: number) {
-    return await t.click(`.inventory_item:nth-child(${listItem}) button`);
+    const selector = `.inventory_item:nth-child(${listItem}) button`;
+
+    return await t.click(Selector(selector));
   }
 
- async getShoppingCartValue () {
-    return  await this.shoppingCartLink.find('.shopping_cart_badge').innerText
-  }
+  getShoppingCartValue() {
+    const { innerText = '' } = this.shoppingCartLink.find(
+      '.shopping_cart_badge',
+    );
 
-  getInventoryItem(listItem: number) {
-    return {
-      img: Selector(`.inventory_item:nth-child(${listItem}) img`),
-      title: Selector(
-        `.inventory_item:nth-child(${listItem}) .inventory_item_name`
-      ),
-      description: Selector(
-        `.inventory_item:nth-child(${listItem}) .inventory_item_desc`
-      ),
-      price: Selector(
-        `.inventory_item:nth-child(${listItem}) .inventory_item_price`
-      ),
-    };
+    return innerText;
   }
 }

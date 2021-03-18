@@ -4,13 +4,14 @@
   "description": "challenge",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ext ts",
+    "headless": "testcafe chrome:headless ./page_model/test/**/*.spec.ts",
+    "lint": "eslint ./page_model/ --ext ts",
     "lint:fix": "eslint . --ext ts --fix",
     "e2e:chrome": "testcafe chrome ./page_model/test/**/*.spec.ts",
     "e2e:firefox": "testcafe firefox ./page_model/test/**/*.spec.ts",
     "e2e:edge": "testcafe edge ./page_model/test/**/*.spec.ts",
+    "e2e:opera": "testcafe opera ./page_model/test/**/*.spec.ts",
     "e2e:ie": "testcafe ie ./page_model/test/**/*.spec.ts",
-    "e2e:headless": "testcafe chrome:headless ./page_model/test/**/*.spec.ts",
     "test:multi-browser": "run-p -l e2e:chrome e2e:firefox e2e:edge e2e:ie"
   },
   "author": "Gabriela Moreno Quintana",
